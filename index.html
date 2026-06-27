@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ - My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6B8E23 0%, #556B2F 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(107, 142, 35, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #6B8E23;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #6B8E23;
+            border-radius: 2px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            flex: 0 0 150px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #6B8E23 0%, #556B2F 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3em;
+            flex-shrink: 0;
+        }
+
+        .profile-text h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #6B8E23;
+        }
+
+        .profile-text p {
+            font-size: 1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #6B8E23;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.15);
+        }
+
+        .skill-card h3 {
+            color: #6B8E23;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6B8E23 0%, #556B2F 100%);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.3);
+        }
+
+        .contact-section {
+            text-align: center;
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+        }
+
+        .contact-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        footer {
+            background: #f5f5f5;
+            color: #666;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <p>クリエイティブ・ソリューションのご提案</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 自己紹介セクション -->
+            <section>
+                <h2>自己紹介</h2>
+                <div class="profile">
+                    <div class="profile-image">👤</div>
+                    <div class="profile-text">
+                        <h3>こんにちは</h3>
+                        <p>
+                            このサイトへようこそ。私はデジタル時代の課題を解決し、ビジネスの成長を支援するクリエイターです。
+                        </p>
+                        <p>
+                            顧客満足度を最優先に、高品質なサービスの提供を心がけています。ご質問やご相談は、いつでもお気軽にお問い合わせください。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- できることセクション -->
+            <section>
+                <h2>できること</h2>
+                <div class="skills">
+                    <div class="skill-card">
+                        <h3>📱 Web制作</h3>
+                        <p>
+                            レスポンシブなホームページやポートフォリオサイトの制作。SEO対策も含めた最適な構築をお受けします。
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>✏️ コンテンツ制作</h3>
+                        <p>
+                            ブログ記事、SNS投稿など、目的に応じたコンテンツの企画・制作をサポートします。
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🎨 デザイン</h3>
+                        <p>
+                            ロゴ、バナー、チラシなど、ブランドイメージに合わせたデザインを提案します。
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>📊 コンサルティング</h3>
+                        <p>
+                            デジタルマーケティング戦略の立案や、ビジネス課題の分析・解決をお手伝いします。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- お問い合わせセクション -->
+            <section class="contact-section">
+                <h2>お問い合わせ</h2>
+                <p>
+                    何かご質問やお仕事のご依頼がございましたら、<br>
+                    お気軽にご連絡ください。
+                </p>
+                <a href="mailto:taisk8er511@gmail.com" class="cta-button">お問い合わせする</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

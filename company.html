@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行政書士宮本べべつ法務事務所 - 相続・遺言・終活支援</title>
+    <!-- Google Fonts: Noto Serif JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* ===== ヘッダー ===== */
+        header {
+            background: linear-gradient(135deg, #17A2B8 0%, #0f7a94 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(23, 162, 184, 0.2);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.4em;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-small {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 0.85em;
+            opacity: 0.9;
+            margin-top: 3px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* ハンバーガーメニュー（モバイル用） */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== コンテナ ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== ヒーローセクション ===== */
+        .hero {
+            background: linear-gradient(135deg, #17A2B8 0%, #2F5233 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .hero .tagline {
+            font-size: 1.1em;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button.primary {
+            background: #6B8E23;
+            color: white;
+        }
+
+        .cta-button.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: white;
+            color: #17A2B8;
+        }
+
+        .cta-button.secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* ===== セクション共通 ===== */
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #17A2B8;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #6B8E23, #17A2B8);
+            border-radius: 2px;
+        }
+
+        /* ===== 代表者紹介 ===== */
+        .profile-section {
+            background: #f9f9f9;
+        }
+
+        .profile-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            flex: 0 0 180px;
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #17A2B8, #6B8E23);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4em;
+            box-shadow: 0 8px 20px rgba(23, 162, 184, 0.2);
+        }
+
+        .profile-text h3 {
+            font-size: 1.8em;
+            color: #17A2B8;
+            margin-bottom: 10px;
+        }
+
+        .profile-text .title {
+            color: #6B8E23;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .profile-text p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+
+        /* ===== サービスセクション ===== */
+        .services {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #f0f0f0;
+            padding: 35px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            border-color: #17A2B8;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(23, 162, 184, 0.15);
+        }
+
+        .service-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #6B8E23;
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        /* ===== お問い合わせセクション ===== */
+        .contact-section {
+            background: linear-gradient(135deg, #17A2B8 0%, #2F5233 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section h2::after {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .contact-item p {
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .contact-detail {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .contact-detail a {
+            font-size: 1.4em;
+        }
+
+        .contact-note {
+            font-size: 1.1em;
+            margin-top: 10px;
+            opacity: 0.85;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-buttons .cta-button {
+            background: white;
+            color: #17A2B8;
+        }
+
+        .contact-buttons .cta-button:hover {
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* ===== ブログセクション ===== */
+        .blog-section {
+            background: #f9f9f9;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(23, 162, 184, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #17A2B8, #6B8E23);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-date {
+            font-size: 0.85em;
+            color: #17A2B8;
+            margin-bottom: 8px;
+        }
+
+        .blog-card h3 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: #17A2B8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #6B8E23;
+        }
+
+        /* ===== フッター ===== */
+        /* ===== 地図セクション ===== */
+        .map-section {
+            background: white;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            border: 3px solid #17A2B8;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
+
+        svg text {
+            font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+        }
+
+        .map-info {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .map-info h3 {
+            color: #17A2B8;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .map-info p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #2F5233;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .footer-section p {
+            font-size: 0.9em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .footer-section a {
+            color: #17A2B8;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .footer-section a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        /* ===== レスポンシブ対応 ===== */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                display: none;
+                gap: 15px;
+            }
+
+            nav.active ul {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 15px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+
+            .profile-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            .hero .tagline {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 25px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                gap: 20px;
+            }
+
+            .contact-item {
+                padding: 20px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== ヘッダー ===== -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                行政書士宮本べべつ法務事務所
+                <div class="logo-small">地域の皆様の信頼を大切に</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">サービス</a></li>
+                    <li><a href="#profile">事務所紹介</a></li>
+                    <li><a href="#blog">ブログ</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== ヒーロー ===== -->
+    <section class="hero">
+        <div class="container">
+            <h1>あなたの人生の大切な瞬間を<br>サポートします</h1>
+            <p class="subtitle">相続・遺言・終活など、人生のターニングポイントで</p>
+            <p class="tagline">
+                行政書士宮本べべつ法務事務所は、相続・遺言、終活支援、介護業務20年の経験から高齢者の生活を支える支援を行っています。企業のスタートアップサポートや自動車登録業務、地域住民の幅広いご相談に対応いたします。お気軽にお問い合わせください。
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button primary">無料相談予約</a>
+                <a href="#services" class="cta-button secondary">サービス詳細</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 自己紹介 ===== -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <h2>自己紹介</h2>
+            <div class="profile-content">
+                <div class="profile-image">👨‍⚖️</div>
+                <div class="profile-text">
+                    <h3>行政書士　　宮本泰輔</h3>
+                    <p class="title">北海道行政書士会 旭川支部所属</p>
+                    <p>
+                        <strong>生年月日：</strong>昭和51年1月23日<br>
+                        <strong>登録番号：</strong>第22010505号
+                    </p>
+                    <p>
+                        地域の振興のため、町内や地域の行事に積極的に参加しています。地元の太鼓保存会である「西神楽辺別太鼓」のメンバーとして活動し、地域の様々な行事で太鼓を叩いています。
+                    </p>
+                    <p>
+                        行政書士として業務を行う傍ら、いまだに現役で高齢者の介護に携わっており、実務経験を通じて介護が必要な皆様の気持ちを理解した支援ができます。
+                    </p>
+                    <p>
+                        さらに、AIを活用して業務の効率化をサポートするサービスの準備も進めており、最新技術と地域への貢献を両立させながら、皆様のお役に立つことを目指しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== サービス紹介 ===== -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>主な業務</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🏛️</div>
+                    <h3>相続・遺言</h3>
+                    <p>遺産分割から遺言書作成まで、相続に関する全般的なサポートをいたします。</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌸</div>
+                    <h3>終活・成年後見</h3>
+                    <p>20年の介護経験から、シニア世代の終活や成年後見制度についてアドバイスします。</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🚗</div>
+                    <h3>自動車登録業務</h3>
+                    <p>自動車の登録変更や名義変更など、複雑な手続きを分かりやすくサポートします。</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🚀</div>
+                    <h3>企業スタートアップ</h3>
+                    <p>起業・開業に必要な各種手続きや許可申請について、トータルでサポートします。</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">📋</div>
+                    <h3>地域振興・支援</h3>
+                    <p>地域の活性化や住民の皆様の様々なご相談に幅広く対応いたします。</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💬</div>
+                    <h3>その他各種相談</h3>
+                    <p>上記に限らず、お困りのことはお気軽にご相談ください。一緒に解決策を探します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== お問い合わせセクション ===== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <p class="contact-description">
+                ご相談やご質問、お仕事のご依頼がございましたら、お気軽にお問い合わせください。<br>
+                以下の方法でご連絡いただけます。
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 電話でのお問い合わせ</h3>
+                    <p class="contact-detail"><a href="tel:08032938296">080-3293-8296</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>⏰ 営業時間</h3>
+                    <p class="contact-detail">10:00～18:00</p>
+                    <p class="contact-note">定休日：日曜日</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 事務所住所</h3>
+                    <p class="contact-detail">北海道旭川市西神楽北１条<br>１丁目１３８番地の７７</p>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <a href="mailto:contact@example.com" class="cta-button">お問い合わせフォーム</a>
+                <a href="tel:08032938296" class="cta-button">今すぐ電話</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 地図セクション ===== -->
+    <section class="map-section">
+        <div class="container">
+            <h2>事務所までの地図</h2>
+            <div class="map-container">
+                <svg viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;">
+
+                    <!-- ====== 道路の描画 ====== -->
+                    <!-- 西神楽公園への道 (踏切越直進して右へにカーブ) -->
+                    <path d="M 400 450 L 400 250 Q 400 150 500 150 L 800 150" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" />
+
+                    <!-- 踏切から上への道 (直進部分) -->
+                    <line x1="400" y1="700" x2="400" y2="450" stroke="#ffffff" stroke-width="30" />
+
+                    <!-- 踏切後左方への横道 -->
+                    <line x1="400" y1="450" x2="200" y2="450" stroke="#ffffff" stroke-width="30" stroke-linecap="round" />
+
+                    <!-- 横道から右曲がって二俣へ上る縦道 -->
+                    <line x1="200" y1="470" x2="200" y2="120" stroke="#ffffff" stroke-width="30" stroke-linecap="round" />
+
+                    <!-- 国道237号線 (一番下) -->
+                    <line x1="0" y1="700" x2="1000" y2="700" stroke="#ffcc80" stroke-width="45" />
+                    <line x1="0" y1="700" x2="1000" y2="700" stroke="#ffa726" stroke-width="4" stroke-dasharray="20,20" />
+                    <text x="30" y="665" font-size="16" font-weight="bold" fill="#795548">← 旭川方面</text>
+                    <text x="880" y="665" font-size="16" font-weight="bold" fill="#795548">美瑛方面 →</text>
+
+                    <!-- カーブで踏み止められた右側へ移動 -->
+                    <rect x="550" y="688" width="100" height="24" rx="12" fill="#ffffff" stroke="#ffb300" stroke-width="2"/>
+                    <text x="600" y="705" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">国道237号</text>
+
+                    <!-- JR富良野線 (緑線路) -->
+                    <line x1="0" y1="580" x2="1000" y2="580" stroke="#9e9e9e" stroke-width="16" />
+                    <line x1="0" y1="580" x2="1000" y2="580" stroke="#424242" stroke-width="16" stroke-dasharray="16,16" />
+                    <text x="120" y="565" font-size="16" font-weight="bold" fill="#424242">JR 富良野線</text>
+
+                    <!-- 西神楽公園 -->
+                    <rect x="550" y="40" width="350" height="220" rx="16" fill="#dcedc8" stroke="#aed581" stroke-width="3" />
+                    <circle cx="620" cy="90" r="20" fill="#81c784" />
+                    <circle cx="640" cy="70" r="15" fill="#66bb6a" />
+                    <circle cx="800" cy="180" r="25" fill="#81c784" />
+                    <circle cx="830" cy="160" r="18" fill="#66bb6a" />
+                    <text x="725" y="150" font-size="22" font-weight="bold" fill="#33691e" text-anchor="middle">西神楽公園</text>
+                    <text x="430" y="280" font-size="16" font-weight="bold" fill="#757575">道路 →</text>
+
+
+                    <!-- ====== 車ルート（緑で描画） ====== -->
+                    <!-- メインの行き先 -->
+                    <path d="M 180 700 L 400 700 L 400 450 L 200 450 L 200 150 L 150 150" fill="none" stroke="#8cb4f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 180 700 L 400 700 L 400 450 L 200 450 L 200 150 L 150 150" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray: 10, 10; animation: dash 1s linear infinite;" />
+
+                    <!-- 矢印の頭 -->
+                    <!-- 国道下 -->
+                    <polygon points="300,693 315,700 300,707" fill="#2563eb" />
+                    <!-- 踏切前 -->
+                    <polygon points="393,640 400,625 407,640" fill="#2563eb" />
+                    <!-- 左曲がり横道 -->
+                    <polygon points="295,443 280,450 295,457" fill="#2563eb" />
+                    <!-- 二俣へ上る縦道 -->
+                    <polygon points="193,310 200,295 207,310" fill="#2563eb" />
+                    <!-- 駐車場へ左曲がり -->
+                    <polygon points="170,143 155,150 170,157" fill="#2563eb" />
+
+
+                    <!-- ====== ランドマーク ====== -->
+
+                    <!-- 信号 -->
+                    <rect x="415" y="650" width="40" height="16" rx="4" fill="#424242" />
+                    <circle cx="423" cy="658" r="4" fill="#f44336" />
+                    <circle cx="435" cy="658" r="4" fill="#ffeb3b" />
+                    <circle cx="447" cy="658" r="4" fill="#4caf50" />
+                    <path d="M 435 666 L 400 700" fill="none" stroke="#757575" stroke-width="2" />
+
+                    <!-- 国道沿い (交差点から左ー旭川方面) -->
+                    <!-- ローソン -->
+                    <rect x="90" y="730" width="80" height="30" rx="4" fill="#0288d1" />
+                    <text x="130" y="750" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">ローソン</text>
+                    <image x="110" y="765" width="40" height="40" href="assets/images/lawson-logo.svg" />
+
+                    <!-- 西神楽郵便局 -->
+                    <rect x="180" y="730" width="120" height="30" rx="4" fill="#e53935" />
+                    <text x="240" y="750" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">西神楽郵便局 →</text>
+                    <text x="240" y="790" font-size="32" font-weight="bold" fill="#e53935" text-anchor="middle">〒</text>
+
+                    <!-- 妙寿寺 -->
+                    <rect x="310" y="730" width="80" height="30" rx="4" fill="#8d6e63" />
+                    <text x="350" y="750" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">妙寿寺</text>
+                    <text x="350" y="790" font-size="32" font-weight="bold" fill="#8d6e63" text-anchor="middle">⛩️</text>
+
+                    <!-- 国道沿い (交差点から右ー現在地方面) -->
+                    <!-- 勝龍寺 (駅と交差点の間) -->
+                    <rect x="620" y="730" width="80" height="30" rx="4" fill="#8d6e63" />
+                    <text x="660" y="750" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">勝龍寺</text>
+                    <text x="660" y="790" font-size="32" font-weight="bold" fill="#8d6e63" text-anchor="middle">⛩️</text>
+
+                    <!-- JR西神楽駅 -->
+                    <text x="780" y="581" font-size="18" font-weight="bold" fill="#1976d2">🚆</text>
+                    <rect x="800" y="555" width="130" height="40" rx="6" fill="#1976d2" />
+                    <text x="865" y="581" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">JR 西神楽駅</text>
+
+
+                    <!-- 踏切の注記 -->
+                    <rect x="230" y="530" width="220" height="36" rx="18" fill="#ffffff" stroke="#d32f2f" stroke-width="2"/>
+                    <text x="340" y="554" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">踏切から約３００m</text>
+                    <line x1="330" y1="566" x2="390" y2="580" stroke="#d32f2f" stroke-width="2" />
+
+                    <!-- 西神楽宮前こども園 (踏切後進行方向の右側に配置) -->
+                    <rect x="425" y="435" width="160" height="30" rx="4" fill="#ffb74d" />
+                    <text x="505" y="455" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">西神楽宮前こども園</text>
+                    <text x="350" y="430" font-size="14" font-weight="bold" fill="#d32f2f">← 左曲がり</text>
+
+                    <!-- 塚形鉄工所 (横道の中央ー右曲がり交差点の左上) -->
+                    <text x="15" y="495" font-size="28" font-weight="bold" fill="#90a4ae">🏭</text>
+                    <rect x="60" y="475" width="120" height="30" rx="4" fill="#90a4ae" />
+                    <text x="120" y="495" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">塚形鉄工所</text>
+                    <text x="100" y="460" font-size="14" font-weight="bold" fill="#d32f2f">右曲がり↑</text>
+
+                    <!-- 旭川美瑛sakura西神楽 (縦道の右側) -->
+                    <rect x="225" y="320" width="210" height="32" rx="4" fill="#f06292" />
+                    <text x="330" y="342" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">旭川美瑛sakura西神楽</text>
+
+                    <!-- スキー・ハウスLily (縦道の左側) -->
+                    <text x="5" y="280" font-size="16" font-weight="bold" fill="#64b5f6">⛷️</text>
+                    <rect x="30" y="260" width="150" height="30" rx="4" fill="#64b5f6" />
+                    <text x="105" y="280" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">スキー・ハウスLily</text>
+
+
+                    <!-- ====== 二俣と駐車場 ====== -->
+                    <!-- 駐車場スペース -->
+                    <rect x="70" y="130" width="80" height="40" rx="4" fill="#757575" />
+                    <!-- 白線 -->
+                    <line x1="110" y1="135" x2="110" y2="165" stroke="#ffffff" stroke-width="2" />
+                    <line x1="85" y1="135" x2="85" y2="165" stroke="#ffffff" stroke-width="2" />
+                    <line x1="135" y1="135" x2="135" y2="165" stroke="#ffffff" stroke-width="2" />
+                    <rect x="80" y="140" width="20" height="20" rx="2" fill="#1565c0" />
+                    <text x="90" y="155" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">P</text>
+
+                    <rect x="70" y="175" width="90" height="20" rx="10" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" />
+                    <text x="115" y="189" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">来客用 2台分</text>
+
+                    <!-- 行政書士事務所 (一番奥) -->
+                    <rect x="15" y="60" width="270" height="45" rx="6" fill="#ffffff" stroke="#1976d2" stroke-width="3" />
+                    <text x="150" y="88" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">行政書士宮本べべつ法務事務所</text>
+
+                    <!-- 事務所への進入道 (黒) -->
+                    <path d="M 150 145 L 150 115" fill="none" stroke="#424242" stroke-width="2" />
+                    <polygon points="146,120 150,110 154,120" fill="#424242" />
+
+                    <!-- ====== 凡例 ====== -->
+                    <rect x="800" y="40" width="160" height="70" rx="8" fill="rgba(255,255,255,0.95)" stroke="#bdbdbd" stroke-width="1.5" />
+                    <text x="880" y="65" font-size="14" font-weight="bold" fill="#424242" text-anchor="middle">📍 ルート凡例</text>
+
+                    <line x1="820" y1="85" x2="860" y2="85" stroke="#8cb4f5" stroke-width="8" stroke-linecap="round" />
+                    <polygon points="850,80 860,85 850,90" fill="#2563eb" />
+                    <text x="870" y="90" font-size="13" font-weight="bold" fill="#424242">車でのルート</text>
+
+                </svg>
+            </div>
+            <div class="map-info">
+                <h3>📍 事務所のご案内</h3>
+                <p><strong>事務所名：</strong>行政書士宮本べべつ法務事務所</p>
+                <p><strong>住所：</strong>北海道旭川市西神楽北１条１丁目１３８番地の７７</p>
+                <p><strong>電話：</strong><a href="tel:08032938296" style="color: #17A2B8; text-decoration: none;">080-3293-8296</a></p>
+                <p><strong>営業時間：</strong>10:00～18:00（定休日：日曜日）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ブログセクション ===== -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2>ブログ・コラム</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">📝</div>
+                    <div class="blog-content">
+                        <p class="blog-date">2026年6月22日</p>
+                        <h3>遺言書の作成について</h3>
+                        <p>遺言書は、ご自身の最期の意思を法的に有効な形で残すことができる大切なドキュメントです。正しく作成することで、大切なご家族のトラブルを防ぐことができます。</p>
+                        <a href="#" class="read-more">続きを読む →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">🏠</div>
+                    <div class="blog-content">
+                        <p class="blog-date">2026年6月15日</p>
+                        <h3>相続手続きの流れ</h3>
+                        <p>相続は複雑な手続きが多く、期限も決まっています。このコラムでは、相続手続きの基本的な流れをわかりやすく説明します。</p>
+                        <a href="#" class="read-more">続きを読む →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">🌱</div>
+                    <div class="blog-content">
+                        <p class="blog-date">2026年6月8日</p>
+                        <h3>終活って何から始める？</h3>
+                        <p>終活は、残りの人生をより充実したものにするための活動です。何から始めたら良いのか、具体的なステップをご紹介します。</p>
+                        <a href="#" class="read-more">続きを読む →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== フッター ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>行政書士宮本べべつ法務事務所</h3>
+                    <p>地域の皆様の大切な人生のパートナーとして、最適なサポートを提供いたします。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>ご連絡先</h3>
+                    <p>
+                        <strong>電話：</strong> <a href="tel:08032938296">080-3293-8296</a><br>
+                        <strong>営業時間：</strong> 10:00～18:00<br>
+                        <strong>定休日：</strong> 日曜日
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>住所</h3>
+                    <p>北海道旭川市西神楽北１条<br>１丁目１３８番地の７７</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 行政書士宮本べべつ法務事務所. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ハンバーガーメニューの機能
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // メニューを閉じる
+                    document.querySelector('nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
