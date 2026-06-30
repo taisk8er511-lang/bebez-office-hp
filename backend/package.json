@@ -1,0 +1,19 @@
+{
+  "name": "bebetsu-chatbot",
+  "version": "1.0.0",
+  "description": "行政書士宮本べべつ法務事務所のAIチャットボット",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@anthropic-ai/sdk": "^0.9.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
