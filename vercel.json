@@ -1,19 +1,26 @@
 {
   "version": 2,
-  "buildCommand": "cd backend && npm install",
-  "outputDirectory": "./",
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/chat",
-      "destination": "/backend/server.js"
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
     }
   ],
-  "functions": {
-    "backend/server.js": {
-      "runtime": "nodejs18.x"
+  "routes": [
+    {
+      "src": "/api/.*",
+      "dest": "api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
+  ],
+  "env": {
+    "NODE_ENV": "production"
   }
 }
