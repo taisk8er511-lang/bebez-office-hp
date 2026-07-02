@@ -194,9 +194,14 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// サーバー起動
-app.listen(PORT, () => {
-  console.log(`✅ チャットボットサーバーが起動しました: http://localhost:${PORT}`);
-  console.log(`📍 APIエンドポイント: POST ${PORT}/api/chat`);
-  console.log(`🔍 ヘルスチェック: GET ${PORT}/api/health`);
-});
+// Vercel Serverless Functions 用のエクスポート
+module.exports = app;
+
+// ローカル開発時のサーバー起動
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`✅ チャットボットサーバーが起動しました: http://localhost:${PORT}`);
+    console.log(`📍 APIエンドポイント: POST ${PORT}/api/chat`);
+    console.log(`🔍 ヘルスチェック: GET ${PORT}/api/health`);
+  });
+}

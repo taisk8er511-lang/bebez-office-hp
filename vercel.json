@@ -4,23 +4,24 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/api/.*",
+      "src": "/api/(.*)",
       "dest": "api/index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/(?!api)(.*)",
+      "dest": "public/$1"
+    },
+    {
+      "src": "/",
+      "dest": "public/index.html"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "public": true
 }
