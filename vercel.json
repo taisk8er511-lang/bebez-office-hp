@@ -1,25 +1,19 @@
 {
-  "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(?<path>.*)",
-      "dest": "backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
+  "version": 2,
+  "buildCommand": "cd backend && npm install",
+  "outputDirectory": "./",
   "env": {
-    "CLAUDE_API_KEY": "@claude_api_key"
+    "NODE_ENV": "production"
+  },
+  "rewrites": [
+    {
+      "source": "/api/chat",
+      "destination": "/backend/server.js"
+    }
+  ],
+  "functions": {
+    "backend/server.js": {
+      "runtime": "nodejs18.x"
+    }
   }
 }
