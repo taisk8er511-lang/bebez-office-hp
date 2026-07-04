@@ -4,13 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: npm install
-    startCommand: node api/chat.js
-    staticPublishPath: .
-    routes:
-      - path: /api
-        method: any
-      - path: /
-        method: any
+    staticPublishPath: public
     envVars:
       - key: NODE_ENV
         value: production
