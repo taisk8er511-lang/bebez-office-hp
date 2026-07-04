@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: bebez-office-hp
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node api/chat.js
+    staticPublishPath: .
+    routes:
+      - path: /api
+        method: any
+      - path: /
+        method: any
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLAUDE_API_KEY
+        sync: false
