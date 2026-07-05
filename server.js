@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // API エンドポイント
-app.post('/api/chat', require('./api/chat'));
-app.get('/api/health', require('./api/health'));
+app.post('/api/chat', require('./lib/chat'));
+app.get('/api/health', require('./lib/health'));
 
 // ホームページ
 app.get('/', (req, res) => {
