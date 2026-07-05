@@ -4,8 +4,8 @@
   "description": "行政書士宮本べべつ法務事務所のホームページ + チャットボット",
   "main": "api/index.js",
   "scripts": {
-    "start": "node api/index.js",
-    "dev": "node api/index.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.107.0",
